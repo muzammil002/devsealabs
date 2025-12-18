@@ -1,27 +1,28 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 const navItems = [
-  { label: 'Home', href: '#home', active: true },
+  { label: 'Home', href: '/', isRoute: true },
   { label: 'About', href: '#about' },
   { 
     label: 'Services', 
     href: '#services',
     dropdown: [
+      'AI & Machine Learning',
+      'LLM Solutions',
       'Web Development',
       'Mobile Development',
       'Cloud Solutions',
-      'AI & Machine Learning',
       'DevOps Services',
-      'UI/UX Design',
     ]
   },
-  { label: 'Case Studies', href: '#case-studies' },
+  { label: 'Case Studies', href: '/case-studies', isRoute: true },
   { 
     label: 'Technologies', 
     href: '#technologies',
-    dropdown: ['React', 'Node.js', 'Python', 'AWS', 'Flutter', 'Golang']
+    dropdown: ['GPT-4 / Claude', 'TensorFlow', 'PyTorch', 'Python', 'React', 'AWS']
   },
   { label: 'Industries', href: '#industries' },
 ];
@@ -59,14 +60,29 @@ export const Navbar = () => {
               onMouseEnter={() => item.dropdown && setOpenDropdown(item.label)}
               onMouseLeave={() => setOpenDropdown(null)}
             >
-              <Button 
-                variant={item.active ? 'navActive' : 'nav'} 
-                size="sm"
-                className="flex items-center gap-1"
-              >
-                {item.label}
-                {item.dropdown && <ChevronDown className="w-3 h-3" />}
-              </Button>
+              {item.isRoute ? (
+                <Link to={item.href}>
+                  <Button 
+                    variant="nav" 
+                    size="sm"
+                    className="flex items-center gap-1"
+                  >
+                    {item.label}
+                  </Button>
+                </Link>
+              ) : (
+                <Button 
+                  variant="nav" 
+                  size="sm"
+                  className="flex items-center gap-1"
+                  asChild
+                >
+                  <a href={item.href}>
+                    {item.label}
+                    {item.dropdown && <ChevronDown className="w-3 h-3" />}
+                  </a>
+                </Button>
+              )}
               
               {item.dropdown && openDropdown === item.label && (
                 <div className="absolute top-full left-0 mt-2 w-48 glass rounded-lg py-2 animate-fade-in">
@@ -106,14 +122,25 @@ export const Navbar = () => {
         <div className="lg:hidden glass rounded-2xl mt-2 p-4 animate-fade-in">
           <div className="flex flex-col gap-2">
             {navItems.map((item) => (
-              <a 
-                key={item.label}
-                href={item.href}
-                className="px-4 py-2 text-foreground hover:text-primary transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {item.label}
-              </a>
+              item.isRoute ? (
+                <Link 
+                  key={item.label}
+                  to={item.href}
+                  className="px-4 py-2 text-foreground hover:text-primary transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a 
+                  key={item.label}
+                  href={item.href}
+                  className="px-4 py-2 text-foreground hover:text-primary transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+              )
             ))}
             <Button variant="contact" className="mt-2">Contact Us</Button>
           </div>
