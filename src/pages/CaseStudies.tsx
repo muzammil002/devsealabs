@@ -1,5 +1,6 @@
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
+import { IndustriesSection } from '@/components/IndustriesSection';
 import { ArrowRight, Brain, Cpu, MessageSquare, BarChart3, Eye, Zap, Bot, Database, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -265,6 +266,9 @@ export default function CaseStudies() {
           </div>
         </div>
       </section>
+
+      {/* Industries Section */}
+      <IndustriesSection />
 
       {/* CTA Section */}
       <section className="py-24 px-4">
