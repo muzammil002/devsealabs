@@ -144,3 +144,5 @@ Currently, the calendar booking:
 
 To enable email calendar invites, choose one of the options above and update the `handleBooking` function in `CalendarBooking.tsx` to call the API endpoint.
 
+
+

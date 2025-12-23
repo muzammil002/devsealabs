@@ -853,3 +853,5 @@ export const technologyCategories = [
   { id: 'other', name: 'Other', description: 'Additional technologies and platforms' },
 ] as const;
 
+
+

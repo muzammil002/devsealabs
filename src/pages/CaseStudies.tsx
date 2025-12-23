@@ -1,7 +1,7 @@
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { IndustriesSection } from '@/components/IndustriesSection';
-import { ArrowRight, Brain, Cpu, MessageSquare, BarChart3, Eye, Zap, Bot, Database, Sparkles } from 'lucide-react';
+import { ArrowRight, Brain, Cpu, MessageSquare, BarChart3, Eye, Zap, Bot, Database, Sparkles, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -56,6 +56,57 @@ const caseStudies = [
     technologies: ['PyTorch', 'YOLO', 'OpenCV', 'NVIDIA Jetson', 'TensorRT'],
     icon: Eye,
     image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 'chatgenie',
+    title: 'Conversational Data Analytics Platform',
+    category: 'LLM & Conversational AI',
+    description: 'An intelligent, conversational AI assistant that empowers enterprise users to explore complex data and generate visual insights using natural language.',
+    challenge: 'Business teams without deep technical expertise struggled to perform data analysis, relying on manual report generation from data analysts. This created bottlenecks and limited their ability to make timely, data-driven decisions.',
+    solution: 'I engineered an AI assistant that integrates with existing enterprise data systems. Users can ask business-related questions in plain English (e.g., "What were our sales trends last quarter in the North region?"). The system, powered by LLMs, understands the query, retrieves the relevant data, performs analysis, and automatically generates both textual insights and corresponding data visualizations (charts, graphs). It also includes proactive anomaly detection to alert teams to unusual patterns.',
+    results: [
+      { metric: 'Self-Service', label: 'Analytics Access' },
+      { metric: 'Real-Time', label: 'Anomaly Detection' },
+      { metric: 'Eliminated', label: 'Manual Reports' },
+      { metric: 'Faster', label: 'Decision Making' },
+    ],
+    technologies: ['Large Language Models (LLMs)', 'Generative AI', 'Python'],
+    icon: MessageSquare,
+    image: '/case-studies/chatGenie.avif',
+  },
+  {
+    id: 'app-pilot',
+    title: 'Enterprise Knowledge Assistant',
+    category: 'LLM & RAG Systems',
+    description: 'A high-performance RAG system designed to replace slow, manual knowledge base lookups with instant, AI-driven information retrieval.',
+    challenge: 'Client operations teams were losing significant time searching through vast internal knowledge bases to answer complex queries. The existing legacy platform was slow, inefficient, and hampered decision-making speed.',
+    solution: 'I designed and deployed a scalable RAG system that uses a vector database to index all enterprise documentation. When a user asks a question, the system retrieves the most relevant information and uses a powerful LLM to synthesize a precise, context-aware answer. The architecture was built for speed and scale, containerized, and deployed on AWS with serverless triggers to ensure low-latency responses even under heavy load.',
+    results: [
+      { metric: '10K+', label: 'Daily Queries' },
+      { metric: '95%', label: 'Retrieval Accuracy' },
+      { metric: '60%', label: 'Faster Response' },
+      { metric: '24/7', label: 'Availability' },
+    ],
+    technologies: ['GPT-4', 'Pinecone', 'LangChain', 'FastAPI', 'Docker', 'AWS (EC2, Lambda)'],
+    icon: Database,
+    image: '/case-studies/appPilot.avif',
+  },
+  {
+    id: 'xvision',
+    title: 'Bank Security Monitoring System',
+    category: 'Computer Vision & Security',
+    description: 'Comprehensive surveillance system for banks with guard monitoring, ATM security monitoring, and real-time alerting capabilities.',
+    challenge: 'Banks require comprehensive security monitoring across multiple points including guard stations, ATM locations, and general bank premises. Traditional monitoring systems lack real-time alerting and centralized management capabilities.',
+    solution: 'I developed an intelligent surveillance system that provides 24/7 monitoring for bank security. The system includes guard monitoring to track security personnel activity, ATM security monitoring to detect suspicious activities and potential threats, and comprehensive bank monitoring with real-time alerting. The system uses computer vision to analyze video feeds and automatically generates alerts for unusual activities, ensuring rapid response to security incidents.',
+    results: [
+      { metric: '24/7', label: 'Continuous Monitoring' },
+      { metric: 'Real-Time', label: 'Alert System' },
+      { metric: 'Multi-Point', label: 'Security Coverage' },
+      { metric: 'Automated', label: 'Threat Detection' },
+    ],
+    technologies: ['Computer Vision', 'Real-time Monitoring', 'Alert Systems', 'Video Analytics'],
+    icon: Shield,
+    image: '/case-studies/XVision.avif',
   },
   {
     id: 'llm-document-processing',

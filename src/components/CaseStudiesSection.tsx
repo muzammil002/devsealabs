@@ -1,9 +1,10 @@
-import { ArrowRight, Brain, MessageSquare, BarChart3, Eye, Bot, Sparkles } from 'lucide-react';
+import { ArrowRight, Brain, MessageSquare, BarChart3, Eye, Bot, Sparkles, Database, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
 const caseStudies = [
   {
+    id: 'ai-customer-support',
     title: 'AI Customer Support Platform',
     category: 'LLM & Conversational AI',
     description: 'Built an intelligent support system using GPT-4 that handles 80% of queries automatically.',
@@ -12,6 +13,7 @@ const caseStudies = [
     icon: MessageSquare,
   },
   {
+    id: 'predictive-analytics',
     title: 'Predictive Analytics Engine',
     category: 'Machine Learning',
     description: 'ML models predicting demand with 94% accuracy, optimizing inventory and reducing waste.',
@@ -20,6 +22,7 @@ const caseStudies = [
     icon: BarChart3,
   },
   {
+    id: 'computer-vision',
     title: 'Computer Vision QC System',
     category: 'Deep Learning & Vision',
     description: 'Real-time defect detection achieving 99.7% accuracy in manufacturing quality control.',
@@ -28,6 +31,34 @@ const caseStudies = [
     icon: Eye,
   },
   {
+    id: 'chatgenie',
+    title: 'Conversational Data Analytics Platform',
+    category: 'LLM & Conversational AI',
+    description: 'An intelligent, conversational AI assistant that empowers enterprise users to explore complex data and generate visual insights using natural language.',
+    metrics: ['Self-Service Analytics', 'Real-Time Detection', 'Eliminated Manual Reports'],
+    image: '/case-studies/chatGenie.avif',
+    icon: MessageSquare,
+  },
+  {
+    id: 'app-pilot',
+    title: 'Enterprise Knowledge Assistant',
+    category: 'LLM & RAG Systems',
+    description: 'A high-performance RAG system designed to replace slow, manual knowledge base lookups with instant, AI-driven information retrieval.',
+    metrics: ['10K+ Daily Queries', '95% Accuracy', '60% Faster Response'],
+    image: '/case-studies/appPilot.avif',
+    icon: Database,
+  },
+  {
+    id: 'xvision',
+    title: 'Bank Security Monitoring System',
+    category: 'Computer Vision & Security',
+    description: 'Comprehensive surveillance system for banks with guard monitoring, ATM security monitoring, and real-time alerting capabilities.',
+    metrics: ['24/7 Monitoring', 'Real-Time Alerts', 'Multi-Point Security'],
+    image: '/case-studies/XVision.avif',
+    icon: Shield,
+  },
+  {
+    id: 'intelligent-document',
     title: 'Intelligent Document Processing',
     category: 'LLM & NLP',
     description: 'AI system extracting and processing documents with 95% accuracy, saving 85% processing time.',
@@ -36,6 +67,7 @@ const caseStudies = [
     icon: Brain,
   },
   {
+    id: 'recommendation-engine',
     title: 'AI Recommendation Engine',
     category: 'Machine Learning',
     description: 'Personalized recommendations increasing user engagement by 200% and revenue by 35%.',
@@ -44,6 +76,7 @@ const caseStudies = [
     icon: Sparkles,
   },
   {
+    id: 'autonomous-agents',
     title: 'Autonomous AI Agents',
     category: 'LLM & Autonomous AI',
     description: 'AI agents handling complex business workflows from research to report generation.',
@@ -76,10 +109,10 @@ export const CaseStudiesSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {caseStudies.map((study, index) => (
+          {caseStudies.map((study) => (
             <Link 
               to="/case-studies"
-              key={index}
+              key={study.id}
               className="group bg-background border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300 cursor-pointer"
             >
               <div className="relative h-48 overflow-hidden">

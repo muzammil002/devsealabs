@@ -86,9 +86,11 @@ export const Navbar = () => {
       <div className="glass rounded-full px-6 py-3 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-            <span className="text-primary-foreground font-heading font-bold text-xl">D</span>
-          </div>
+          <img 
+            src="/logo.png" 
+            alt="DevSeaLabs Logo" 
+            className="w-10 h-10 object-contain"
+          />
           <span className="font-heading font-bold text-xl text-foreground">devsealabs</span>
         </Link>
 
