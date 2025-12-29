@@ -35,7 +35,7 @@ Message:
 Reply to: {{reply_to}}
 ```
 
-4. Set the "To Email" field to: `muzammilofficial9@gmail.com`
+4. Set the "To Email" field to: `hello@devsealabs.com`
 5. Note your **Template ID** (e.g., `template_xyz789`)
 
 ## 4. Get Your Public Key
@@ -78,11 +78,12 @@ With your actual credentials.
 Once configured, test the form by:
 1. Filling out the contact form
 2. Submitting it
-3. Checking your email inbox at `muzammilofficial9@gmail.com`
+3. Checking your email inbox at `hello@devsealabs.com`
 
 ## Fallback
 
 If EmailJS is not configured, the form will automatically fall back to opening the user's email client with a pre-filled message.
+
 
 
 

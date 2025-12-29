@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const Footer = () => {
@@ -20,13 +20,32 @@ export const Footer = () => {
               Your trusted partner for software development services, staff augmentation, and dedicated development teams.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center hover:bg-primary/20 transition-colors">
+              <a 
+                href="https://www.linkedin.com/company/devsealabs/posts/?feedView=all" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center hover:bg-primary/20 transition-colors"
+              >
                 <Linkedin className="w-5 h-5 text-muted-foreground hover:text-primary" />
               </a>
-              <a href="#" className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center hover:bg-primary/20 transition-colors">
+              <a 
+                href="https://www.instagram.com/devsealabs/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center hover:bg-primary/20 transition-colors"
+              >
+                <Instagram className="w-5 h-5 text-muted-foreground hover:text-primary" />
+              </a>
+              <a 
+                href="#" 
+                className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center hover:bg-primary/20 transition-colors"
+              >
                 <Twitter className="w-5 h-5 text-muted-foreground hover:text-primary" />
               </a>
-              <a href="#" className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center hover:bg-primary/20 transition-colors">
+              <a 
+                href="#" 
+                className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center hover:bg-primary/20 transition-colors"
+              >
                 <Github className="w-5 h-5 text-muted-foreground hover:text-primary" />
               </a>
             </div>

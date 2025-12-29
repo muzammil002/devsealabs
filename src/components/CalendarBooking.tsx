@@ -154,7 +154,7 @@ export const CalendarBooking = () => {
         meeting_date: formattedDateTime,
         meeting_duration: '15 minutes',
         meeting_type: 'Web conferencing details provided upon confirmation.',
-        to_email: 'muzammilofficial9@gmail.com',
+        to_email: 'hello@devsealabs.com',
         reply_to: bookingData.email,
         subject: `New Meeting Booking Request from ${bookingData.name}`,
         message: `Meeting Booking Details:
@@ -299,8 +299,8 @@ ${getGoogleCalendarLink()}`,
               
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 mb-2">Email</h3>
-                <a href="mailto:muzammilofficial9@gmail.com" className="text-white hover:text-green-400 transition-colors">
-                  muzammilofficial9@gmail.com
+                <a href="mailto:hello@devsealabs.com" className="text-white hover:text-green-400 transition-colors">
+                  hello@devsealabs.com
                 </a>
               </div>
             </div>
@@ -308,11 +308,21 @@ ${getGoogleCalendarLink()}`,
             <div className="mb-8">
               <h3 className="text-sm font-semibold text-gray-400 mb-4">Social Network</h3>
               <div className="flex gap-4">
-                <a href="#" className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-green-400 transition-colors">
-                  <span className="text-white font-bold">f</span>
-                </a>
-                <a href="#" className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-green-400 transition-colors">
+                <a 
+                  href="https://www.linkedin.com/company/devsealabs/posts/?feedView=all" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-green-400 transition-colors"
+                >
                   <span className="text-white font-bold">in</span>
+                </a>
+                <a 
+                  href="https://www.instagram.com/devsealabs/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-green-400 transition-colors"
+                >
+                  <span className="text-white font-bold">ig</span>
                 </a>
                 <a href="#" className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-green-400 transition-colors">
                   <span className="text-white font-bold">X</span>

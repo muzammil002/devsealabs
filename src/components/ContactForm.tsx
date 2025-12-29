@@ -68,7 +68,7 @@ export const ContactForm = () => {
         phone: data.phone || 'Not provided',
         subject: data.subject,
         message: data.message,
-        to_email: 'muzammilofficial9@gmail.com',
+        to_email: 'hello@devsealabs.com',
         reply_to: data.email,
       };
 
@@ -91,7 +91,7 @@ export const ContactForm = () => {
       
       // Show error message
       toast.error(
-        error.text || 'Failed to send message. Please try again or email us directly at muzammilofficial9@gmail.com',
+        error.text || 'Failed to send message. Please try again or email us directly at hello@devsealabs.com',
         {
           duration: 5000,
         }
@@ -230,10 +230,10 @@ export const ContactForm = () => {
       <p className="text-sm text-muted-foreground text-center">
         Or email us directly at{' '}
         <a
-          href="mailto:muzammilofficial9@gmail.com"
+          href="mailto:hello@devsealabs.com"
           className="text-primary hover:underline"
         >
-          muzammilofficial9@gmail.com
+          hello@devsealabs.com
         </a>
       </p>
       

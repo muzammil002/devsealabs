@@ -10,6 +10,7 @@ import { CaseStudiesSection } from '@/components/CaseStudiesSection';
 import { TechnologiesSection } from '@/components/TechnologiesSection';
 import { IndustriesSection } from '@/components/IndustriesSection';
 import { CTASection } from '@/components/CTASection';
+import { WhyChooseUsSection } from '@/components/WhyChooseUsSection';
 import { CalendarBooking } from '@/components/CalendarBooking';
 import { Footer } from '@/components/Footer';
 
@@ -71,14 +72,20 @@ const Index = () => {
       <HeroSection />
       <AwardsSection />
       <AboutSection />
+      <WhyChooseUsSection />
       <ServicesSection />
       <StatsSection />
       <CaseStudiesSection />
       <TechnologiesSection />
       <IndustriesSection />
       <CTASection />
-      <section className="py-20 md:py-24 px-4 bg-gradient-to-b from-gray-50/50 to-background">
-        <div className="container mx-auto max-w-7xl">
+      <section className="py-20 md:py-24 px-4 bg-gradient-to-b from-gray-50/50 to-background relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float" />
+          <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-primary/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '-2s' }} />
+        </div>
+        <div className="container mx-auto max-w-7xl relative z-10">
           <CalendarBooking />
         </div>
       </section>

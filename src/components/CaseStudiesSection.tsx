@@ -111,7 +111,7 @@ export const CaseStudiesSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {caseStudies.map((study) => (
             <Link 
-              to="/case-studies"
+              to={`/case-studies#${study.id}`}
               key={study.id}
               className="group bg-background border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300 cursor-pointer"
             >

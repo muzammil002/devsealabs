@@ -90,10 +90,10 @@ export default function Contact() {
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">Email</h3>
                         <a
-                          href="mailto:muzammilofficial9@gmail.com"
+                          href="mailto:hello@devsealabs.com"
                           className="text-muted-foreground hover:text-primary transition-colors"
                         >
-                          muzammilofficial9@gmail.com
+                          hello@devsealabs.com
                         </a>
                       </div>
                     </div>

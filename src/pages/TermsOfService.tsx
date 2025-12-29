@@ -172,7 +172,7 @@ export default function TermsOfService() {
                 </p>
                 <div className="mt-4 p-4 bg-muted/30 rounded-lg">
                   <p className="text-foreground font-medium mb-2">DevSeaLabs</p>
-                  <p className="text-muted-foreground">Email: <a href="mailto:muzammilofficial9@gmail.com" className="text-primary hover:underline">muzammilofficial9@gmail.com</a></p>
+                  <p className="text-muted-foreground">Email: <a href="mailto:hello@devsealabs.com" className="text-primary hover:underline">hello@devsealabs.com</a></p>
                 </div>
               </div>
 
@@ -185,6 +185,7 @@ export default function TermsOfService() {
     </div>
   );
 }
+
 
 
 

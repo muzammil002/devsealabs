@@ -100,12 +100,13 @@ Private - All rights reserved
 
 ## 👥 Contact
 
-- **Email**: muzammilofficial9@gmail.com
+- **Email**: hello@devsealabs.com
 - **Website**: [DevSeaLabs](https://devsealabs.com)
 
 ---
 
 Built with ❤️ by DevSeaLabs
+
 
 
 

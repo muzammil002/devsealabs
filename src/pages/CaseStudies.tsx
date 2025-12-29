@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { IndustriesSection } from '@/components/IndustriesSection';
@@ -185,6 +187,56 @@ const aiServices = [
 ];
 
 export default function CaseStudies() {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Scroll to top on initial load
+    if (!location.hash) {
+      window.scrollTo(0, 0);
+      return;
+    }
+
+    // Handle hash navigation to specific case study
+    const scrollToCaseStudy = () => {
+      const hash = location.hash;
+      if (hash) {
+        const attemptScroll = (attempts = 0) => {
+          const element = document.querySelector(hash);
+          if (element) {
+            // Calculate offset for fixed navbar
+            const navbarHeight = 100;
+            const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = Math.max(0, elementPosition - navbarHeight - 20);
+            
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: attempts === 0 ? 'smooth' : 'auto'
+            });
+          } else if (attempts < 10) {
+            // Retry if element not found yet
+            setTimeout(() => attemptScroll(attempts + 1), 100);
+          }
+        };
+        
+        // Start attempting after a short delay to ensure DOM is ready
+        setTimeout(() => attemptScroll(), 100);
+      }
+    };
+
+    scrollToCaseStudy();
+
+    // Listen for hash changes
+    const handleHashChange = () => {
+      scrollToCaseStudy();
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, [location.hash, location.pathname]);
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -241,8 +293,9 @@ export default function CaseStudies() {
           <div className="grid gap-12">
             {caseStudies.map((study, index) => (
               <div 
+                id={study.id}
                 key={study.id}
-                className={`grid lg:grid-cols-2 gap-8 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
+                className={`grid lg:grid-cols-2 gap-8 items-center scroll-mt-24 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
               >
                 {/* Image */}
                 <div className={`relative ${index % 2 === 1 ? 'lg:order-2' : ''}`}>

@@ -46,17 +46,24 @@ export const HeroSection = () => {
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '-3s' }} />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '-1.5s' }} />
+        <div className="absolute top-3/4 right-1/3 w-64 h-64 bg-primary/8 rounded-full blur-2xl animate-float" style={{ animationDelay: '-4s' }} />
       </div>
 
       {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-40" />
+      
+      {/* Animated Gradient Orbs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/5 via-transparent to-transparent" />
+        <div className="absolute bottom-0 right-0 w-full h-full bg-gradient-to-tl from-primary/3 via-transparent to-transparent" />
+      </div>
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-6xl mx-auto py-20">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 animate-fade-in">
           <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-          <span className="text-sm font-medium text-primary">Trusted by 1000+ Companies Worldwide</span>
+          <span className="text-sm font-medium text-primary">Trusted by 250+ Companies Worldwide</span>
         </div>
 
         <h1 className="font-heading font-bold text-5xl md:text-7xl lg:text-8xl mb-6 animate-slide-up leading-tight">
@@ -65,21 +72,24 @@ export const HeroSection = () => {
         
         <h2 className="font-heading font-bold text-4xl md:text-6xl lg:text-7xl mb-6 animate-slide-up" style={{ animationDelay: '0.1s' }}>
           <span className="text-gradient glow-text">{displayText}</span>
-          <span className="animate-blink text-primary">|</span>
+          <span className="animate-blink text-primary ml-2">|</span>
         </h2>
         
         <h3 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-4 text-foreground/80 animate-slide-up" style={{ animationDelay: '0.2s' }}>
-          with <span className="text-primary">500+</span> Expert Developers
+          with <span className="text-primary relative">
+            <span className="relative z-10">85+</span>
+            <span className="absolute inset-0 bg-primary/20 blur-xl -z-10" />
+          </span> Expert Developers
         </h3>
 
-        <p className="text-muted-foreground text-lg md:text-xl mb-12 max-w-2xl mx-auto animate-slide-up" style={{ animationDelay: '0.3s' }}>
-          Scale your development team with world-class engineers. Staff augmentation, dedicated teams, and custom software solutions.
+        <p className="text-muted-foreground text-lg md:text-xl mb-12 max-w-2xl mx-auto animate-slide-up leading-relaxed" style={{ animationDelay: '0.3s' }}>
+          Scale your development team with world-class engineers. Staff augmentation, dedicated teams, and custom software solutions that drive real business results.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-slide-up" style={{ animationDelay: '0.4s' }}>
           <Link to="/contact">
             <Button variant="glow" size="xl" className="group shadow-lg">
-              Get Started
+              Book a Free Consultation
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
@@ -93,20 +103,20 @@ export const HeroSection = () => {
 
         {/* Trust Indicators */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.5s' }}>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">500+</div>
+          <div className="text-center group">
+            <div className="text-3xl md:text-4xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">85+</div>
             <div className="text-sm text-muted-foreground">Expert Developers</div>
           </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">1000+</div>
+          <div className="text-center group">
+            <div className="text-3xl md:text-4xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">280+</div>
             <div className="text-sm text-muted-foreground">Projects Delivered</div>
           </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">50+</div>
+          <div className="text-center group">
+            <div className="text-3xl md:text-4xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">22+</div>
             <div className="text-sm text-muted-foreground">Countries Served</div>
           </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">10+</div>
+          <div className="text-center group">
+            <div className="text-3xl md:text-4xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">6+</div>
             <div className="text-sm text-muted-foreground">Years Experience</div>
           </div>
         </div>
