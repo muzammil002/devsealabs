@@ -39,9 +39,9 @@ const contactFormSchema = z.object({
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 // EmailJS configuration
-const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_5frqtbt';
-const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_dwgh9uf';
-const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '_Ezsu9qvdwDcYqEy4';
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_fk2qy4t';
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_k5pr52e';
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'YINzcyp5Ny0PMLBs6';
 
 export const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -68,7 +68,7 @@ export const ContactForm = () => {
         phone: data.phone || 'Not provided',
         subject: data.subject,
         message: data.message,
-        to_email: 'hello@devsealabs.com',
+        to_email: 'muhammadtalha856@gmail.com',
         reply_to: data.email,
       };
 
